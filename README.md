@@ -25,7 +25,7 @@ JiJJY sync in action:
 
 ![Seiko DL305K syncing to JiJJY](img/JiJJY_Seiko_DL305K.gif)
 
-*Seiko clocks display a little W or E symbol to show which of the two JJY frequencies is received: West (60 kHz) or East (40 kHz).*
+*Seiko clocks display a little W or E symbol to indicate which of the two JJY frequencies it's tuned in to, West (60 kHz) or East (40 kHz).*
 
 
 ## Antenna wiring
@@ -40,7 +40,7 @@ Place the clock on top of the loop or tape the wire to the back of clock near wh
 
 The effective transmission range is tens of millimeters at best (YMMV).
 
-![IMG](img/JiJJY_wiring.jpg)
+![JiJJY wiring](img/JiJJY_wiring.jpg)
 
 *GPIO 3 (RX) is the only GPIO pin on the ESP-01 board that can be pulled low during startup, pulling any of the other GPIO pins low changes the boot mode of the ESP-01 (check your wiring if both status LEDs are steadily illuminated).*
 
@@ -70,3 +70,14 @@ Other hosts on the same subnet can listen for these messages by opening a UDP so
 ```
 nc -klu 1337
 ```
+
+
+## Result
+
+I glued the hardware to the underside of my nightstand and placed the clock right above the antenna coil, power is provided by a 5v USB power supply and a 3.3v regulator. The clock is held in place with velcro strips to ensure it stays aligned with the antenna.
+
+This setup has been working out great so far, the clock is happy with the signal and I'm happy that all my timekeeping devices stay in perfect sync.
+
+![JiJJY antenna mounted](img/JiJJY_installation.jpg)
+
+![Seiko DL305K synced](img/JiJJY_result.jpg)
